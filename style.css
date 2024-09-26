@@ -1,0 +1,407 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    background-color: #000; /* Zwarte achtergrondkleur */
+    cursor: none;
+    overflow-x: hidden; /* voorkomt horizontaal scrollen */
+}
+
+/* Aangepaste muis cursor */
+.custom-cursor {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #f01;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: background 0.2s ease;
+    z-index: 1000;
+}
+
+/* Header Styling */
+header {
+    position: relative;
+    height: 100vh;
+    background: url('img/b1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #f01;
+    margin-left: 20px; /* Afstand van de linkerkant */
+}
+
+
+/* Hero sectie */
+.hero {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f01; /* Felrood */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    max-width: 700px;
+    margin: 20px auto;
+    color: #fff; /* Witte tekst */
+}
+
+ 
+/* Gallery sectie */
+.gallery-section {
+    padding: 100px 20px;
+    background-color: #000;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 3rem;
+    color: #f01;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 45%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Awards and Experience Sectie */
+.awards-section {
+    padding: 100px 20px;
+    background-color: #111; /* Donkere achtergrond */
+    color: #ddd; /* Lichte tekst voor contrast */
+    text-align: center;
+}
+
+.awards-section h2 {
+    font-size: 3rem;
+    color: #f01;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.awards-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.award-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Lichte rand om elk item */
+    border-radius: 8px; /* Maak de hoeken rond */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Schaduw bij hover */
+}
+
+.award-item h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.award-item .date {
+    font-size: 0.9rem;
+    color: #f01;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.award-item .details {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Slider container */
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Slider navigatiepijlen */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Contact sectie */
+/* Contact Section */
+.contact-section {
+    padding: 100px 20px;
+    background-color: #111;
+    text-align: center;
+    color: #ddd;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #f01;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section input, 
+.contact-section textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-section button {
+    padding: 15px;
+    border: none;
+    background-color: #f01;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #d01;
+}
+
+/* Footer styling */
+footer {
+    background-color: #111;
+    color: #ddd;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Footer content styling */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Scroll naar boven knop */
+.scroll-top {
+    display: inline-block;
+    font-size: 2rem;
+    color: #f01;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-top:hover {
+    color: #ff4141;
+    transform: translateY(-5px); /* Kleine hover animatie omhoog */
+}
+
+/* Copyright sectie */
+footer p {
+    font-size: 1rem;
+    color: #ddd;
+    margin: 0;
+}
+
+footer p strong {
+    color: #f01;
+}
+
+svg {
+    height: 100vh; /* Zorg ervoor dat de golf groot genoeg is */
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Achtergrondlaag */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hero sectie */
+    .hero h1 {
+        font-size: 2.5rem; /* Kleiner lettertype voor de titel */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Kleinere tekst voor de beschrijving */
+        max-width: 90%; /* Verklein de breedte van de tekst */
+    }
+
+    /* Gallery sectie */
+    .gallery-section h2 {
+        font-size: 2rem; /* Kleinere koptekst */
+    }
+
+    .gallery-grid {
+        flex-direction: column; /* Zet de galerijafbeeldingen onder elkaar */
+    }
+
+    .gallery-grid img {
+        width: 100%; /* Breidt afbeeldingen uit tot 100% van het scherm */
+        max-height: auto; /* Verwijder de limiet op de hoogte */
+    }
+
+    /* Slider sectie */
+    .slider {
+        max-width: 100%; /* Zorg ervoor dat de slider altijd de volledige breedte van het scherm inneemt */
+    }
+
+    .prev, .next {
+        font-size: 1.5rem; /* Kleinere navigatiepijlen */
+    }
+
+    /* Awards sectie */
+    .awards-section h2 {
+        font-size: 2rem; /* Kleinere koptekst */
+    }
+
+    .award-item {
+        padding: 15px; /* Verminder de padding voor elk award-item */
+    }
+
+    .award-item h3 {
+        font-size: 1.3rem; /* Verminder de tekstgrootte van de titels */
+    }
+
+    /* Contact sectie */
+    .contact-section h2 {
+        font-size: 2rem; /* Kleinere koptekst */
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+        padding: 10px; /* Verminder de padding voor formuliervelden */
+    }
+
+    .contact-section button {
+        padding: 10px; /* Verminder de padding van de knop */
+        font-size: 1rem; /* Verminder de tekstgrootte van de knop */
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px; /* Verklein de padding */
+    }
+
+    footer a {
+        font-size: 1.5rem; /* Kleinere tekstgrootte voor de link */
+    }
+
+    .scroll-top {
+        font-size: 1.5rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+    /* Algemeen */
+    .custom-cursor {
+        display: none; /* Verberg de aangepaste cursor op mobiele apparaten */
+    }
+
+    svg {
+        height: 50vh; /* Maak de SVG-golf kleiner voor mobiele apparaten */
+    }
+}
+
+/* Extra kleine apparaten (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem; /* Nog kleiner voor zeer kleine schermen */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Verminder de tekstgrootte voor beschrijving */
+    }
+
+    .gallery-section h2 {
+        font-size: 1.8rem; /* Verminder de kopgrootte */
+    }
+
+    .contact-section h2 {
+        font-size: 1.8rem; /* Pas de kopgrootte van de contactsectie aan */
+    }
+
+    footer a {
+        font-size: 1.2rem; /* Verklein de voetnoottekst nog verder */
+    }
+}
+

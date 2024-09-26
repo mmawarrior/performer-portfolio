@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information and document settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Website title shown on the browser tab -->
+    <title>Isobel Rose</title>
+
+    <!-- Google Fonts for custom typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- jQuery library for easier JavaScript manipulation -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- GSAP (TweenMax) for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+
+    <!-- Wavify library for wave animation -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
+
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="style.css">      <!-- General styles -->
+    <link rel="stylesheet" href="hamburgermenu.css">  <!-- Styles for the hamburger menu -->
+    <link rel="stylesheet" href="about.css">      <!-- Styles specific to the About section -->
+</head>
+<body>
+    <!-- Header section containing the navigation and hero section -->
+    <header>        
+        <nav>
+            <!-- Placeholder for the logo of the website -->
+            <div class="logo">Your Name/Logo</div>
+
+            <!-- Hamburger menu icon for mobile navigation -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776;  <!-- This is the hamburger symbol "☰" -->
+            </div>
+
+            <!-- Placeholder ID for Home section anchor link -->
+            <header id="Home">
+        </nav>      
+
+        <!-- Navigation menu links, hidden in mobile view, shown when hamburger is clicked -->
+        <div id="menu" class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">About me</a>
+            <a href="#">Gallery</a>
+            <a href="#">Testimonial</a>
+            <a href="#">Contact</a>
+         </div>
+
+        <!-- Main hero section of the website, introducing the person -->
+        <div class="hero">
+            <h1>Greg ROSE</h1>
+            <p>Trainer on Eastern Dance</p>
+        </div>
+
+        <!-- SVG element for a wave animation effect, will be controlled by JavaScript -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path id="wave" d=""/>
+        </svg>
+    </header>
+
+   <!-- Updated About Section with Image and Text Layout -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="about-content">
+            <!-- Image of the Performer -->
+            <div class="about-image">
+                <img src="/img/b1.png" alt="Performer Image">
+            </div>
+            <!-- Text Content about the Performer -->
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I’m Greg Rose, an expert in Eastern Dance, with over a decade of experience in teaching, performing, and choreography. I’ve traveled the world to bring the beauty of Eastern movement to audiences of all ages and have a passion for helping others express themselves through dance.</p>
+                <p>Whether on stage, in the studio, or teaching aspiring dancers, I believe dance is a universal language that connects the soul to the physical world. Join me in exploring this wonderful journey of expression and self-discovery!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Section for displaying awards and experience -->
+    <section id="awards" class="awards-section">
+        <h2>Awards and Experience</h2>
+        <div class="awards-content">
+            <!-- Individual award item -->
+            <div class="award-item">
+                <h3>Art Teacher, Under Jules Burt</h3>
+                <p class="date">August 2017 - Jan 2018</p>
+                <p class="details">Teaching Children (4 to 15 y.o.) art in an after-school program.</p>
+            </div>
+    
+            <!-- Another experience entry -->
+            <div class="award-item">
+                <h3>Photographer - Fryed Egg Productions</h3>
+                <p class="date">2016</p>
+                <p class="details">Provided photography for media and advertisement.</p>
+            </div>
+    
+            <!-- More experience and awards go here -->
+            <div class="award-item">
+                <h3>Plant City EDC - Official Photographer</h3>
+                <p class="date">2016</p>
+                <p class="details">Advertising companies supporting the Committee.</p>
+            </div>
+    
+            <div class="award-item">
+                <h3>2016 International Education Week Photography Competition</h3>
+                <p class="date">3rd Place - Rollins College</p>
+            </div>
+    
+            <div class="award-item">
+                <h3>Dali Museum's Art Competitions</h3>
+                <p class="date">2015</p>
+                <p class="details">Award of Merit at The Dali Museum's Student STATE Surrealist Art Exhibit.</p>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Gallery section displaying images in a slider (carousel) -->
+    <section id="gallery" class="gallery-section">
+        <h2>DANCE GALLERY</h2>
+        <div class="slider">
+            <div class="slides">
+                <img src="img/b1.jpg" alt="Dance 1">   <!-- Image 1 -->
+                <img src="img/b2.jpg" alt="Dance 2">   <!-- Image 2 -->
+                <img src="img/b2.jpg" alt="Dance 3">   <!-- Image 3 -->
+            </div>
+            <!-- Navigation arrows for moving between images -->
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <!-- Contact form for sending inquiries -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Form</h2>
+        <!-- Static email display for direct email inquiries -->
+        <p>For Class enquiries or say ‘Hello’ – <span style="color: #f01">sjoerd@outlook.com</span></p>
+        
+        <!-- Form for users to submit their inquiries -->
+        <form id="contact-form" action="send_mail.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>    <!-- Input for user's name -->
+            <input type="email" name="email" placeholder="Your Email" required> <!-- Input for user's email -->
+            <textarea name="message" placeholder="Your Message" required></textarea> <!-- Input for message -->
+            <button type="submit">Submit Now</button>  <!-- Submit button -->
+        </form>
+        
+        <!-- Display message after form submission (success/error) -->
+        <p id="form-message"></p>
+    </section>
+       
+    <!-- Footer section with back-to-top button and rights reserved message -->
+    <footer>
+        <div class="footer-content">
+            <!-- Button to scroll back to the top (home section) -->
+            <a href="#Home" class="scroll-top">&#8679;</a>
+            <p>All rights reserved by <strong>Jackson Nguyen</strong></p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript file for interactivity -->
+    <script src="./app.js"></script>
+ </body>
+</html>

@@ -1,0 +1,131 @@
+/* General Styling for the About Section */
+.about-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #111, #222); /* Subtle gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* About Content Layout */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    position: relative;
+}
+
+/* About Image Styling */
+.about-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+/* Text Styling */
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    color: #f01;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    letter-spacing: 1.5px;
+}
+
+.about-text h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #f01;
+    display: block;
+    margin: 10px 0;
+}
+
+.about-text p {
+    color: #ddd;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.about-text p:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.about-text p:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+/* Fade-in Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-image img {
+        width: 300px;
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
